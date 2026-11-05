@@ -1,9 +1,10 @@
 name: resolve-airport-ip
 
 on:
-  schedule:
-    # 每 5 分钟一次；GitHub 可能延迟到 5-15 分钟
-    - cron: "*/5 * * * *"
+  # 定时任务已停用：避免高频查询机场私有 DNS，被误判为恶意请求。
+  # 现在只在两种情况下运行：
+  #   1. 本地看门狗检测到当前代理失效，推一个空提交触发一次；
+  #   2. 在 Actions 页面手动 Run workflow。
   push:
     branches: [main]
   workflow_dispatch:
