@@ -4,6 +4,8 @@ on:
   schedule:
     # 每 5 分钟一次；GitHub 可能延迟到 5-15 分钟
     - cron: "*/5 * * * *"
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
