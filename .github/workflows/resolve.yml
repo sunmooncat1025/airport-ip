@@ -1,0 +1,47 @@
+name: resolve-airport-ip
+
+on:
+  schedule:
+    # 每 5 分钟一次；GitHub 可能延迟到 5-15 分钟
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: resolve-airport-ip
+  cancel-in-progress: true
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve airport IP
+        env:
+          XDM_DOMAIN: f615b7dd813b85dc2c8584e558019a6deef99c59d8f06b.xingdaomeng.lky
+          XDM_DNS: "43.108.56.44"
+          XDM_PORTS: "30101,30402,30004"
+        run: |
+          python resolve_ip.py > ip.json.tmp
+          mv ip.json.tmp ip.json
+
+      - name: Commit ip.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ip.json
+          if git diff --cached --quiet; then
+            echo "no change"
+          else
+            git commit -m "chore: update airport ip [skip ci]"
+            git push
+          fi
