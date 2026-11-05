@@ -1,0 +1,12 @@
+{
+  "domain": "f615b7dd813b85dc2c8584e558019a6deef99c59d8f06b.xingdaomeng.lky",
+  "dns": "43.108.56.44",
+  "ips": [
+    "35.79.21.60"
+  ],
+  "ip": "35.79.21.60",
+  "updated": "2026-11-05T04:57:06Z",
+  "source": "github-actions",
+  "port": 30101,
+  "latency_ms": 97
+}
