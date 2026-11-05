@@ -30,6 +30,9 @@ jobs:
           XDM_DOMAIN: f615b7dd813b85dc2c8584e558019a6deef99c59d8f06b.xingdaomeng.lky
           XDM_DNS: "43.108.56.44"
           XDM_PORTS: "30101,30402,30004"
+          EDGE_DOMAIN: bianasfdloo.bianyuan99.net
+          EDGE_DNS: "47.80.244.10"
+          EDGE_PORTS: "46101,46301,46501"
         run: |
           python resolve_ip.py > ip.json.tmp
           mv ip.json.tmp ip.json
