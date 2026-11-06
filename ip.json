@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T15:16:58Z",
+  "updated": "2026-11-06T16:42:09Z",
   "source": "github-actions",
   "domain": "f615b7dd813b85dc2c8584e558019a6deef99c59d8f06b.xingdaomeng.lky",
   "dns": "43.108.56.44",
@@ -8,13 +8,13 @@
   ],
   "ip": "35.79.20.225",
   "port": 30101,
-  "latency_ms": 157,
+  "latency_ms": 105,
   "edge_domain": "bianasfdloo.bianyuan99.net",
   "edge_dns": "47.80.244.10",
   "edge_ips": [
-    "47.238.198.0"
+    "47.242.142.13"
   ],
-  "edge_ip": "47.238.198.0",
+  "edge_ip": "47.242.142.13",
   "edge_port": 46101,
-  "edge_latency_ms": 198
+  "edge_latency_ms": 146
 }
