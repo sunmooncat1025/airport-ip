@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T04:46:53Z",
+  "updated": "2026-11-20T06:08:07Z",
   "source": "github-actions",
   "domain": "f615b7dd813b85dc2c8584e558019a6deef99c59d8f06b.xingdaomeng.lky",
   "dns": "43.108.56.44",
@@ -14,5 +14,5 @@
   ],
   "edge_ip": "13.229.84.113",
   "edge_port": 46101,
-  "edge_latency_ms": 222
+  "edge_latency_ms": 165
 }
